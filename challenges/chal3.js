@@ -21,12 +21,12 @@ function appendDom(){
   $el.append("<p>Their living room is a bowling alley</p>");
   $el.append("<p>Their bedroom is full of conducted tours.</p>");
   $el.append("<p>Their radio is louder than yours,</p>");
-  $el.append("<p>They celebrate week-ends all the week.</p>");
+  $el.append("<p>They ....</p>");
   $el.append("<p>When they take a shower, your ceilings leak.</p>");
   $el.append("<p>They try to get their parties to mix</p>");
   $el.append("<p>By supplying their guests with Pogo sticks,</p>");
   $el.append("<p>And when their fun at last abates,</p>");
-  $el.append("<p>They go to the bathroom on roller skates.</p>");
+  $el.append("<p>They ....</p>");
   $el.append("<p>I might love the people upstairs more</p>");
   $el.append("<p>If only they lived on another floor.</p>");
   //Here we Return the DIV container that holds all the P tags.
