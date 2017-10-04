@@ -4,9 +4,11 @@
   Then add another P tag with the City you live in.
 */
 
-$(document).ready(function(){
+$(document).ready(onReady);
 
-});
+function onReady(){
+
+}
 
 function appendDom(){
   //Write Append Dom Code Here

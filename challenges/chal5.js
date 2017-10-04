@@ -25,9 +25,9 @@ function interval(){
 function appendDom(){
   //Write Append Dom Code Here
   for(var i = 0; i < numSquares; i++){
-    $(".container").append("<div class='square'></div>");
-    var $el = $(".container").children().last();
-    $el.data("id", i);
+    $('.container').append('<div class="square"></div>');
+    var $el = $('.container').children().last();
+    $el.data('id', i);
     divArray.push($el);
   }
   highlightIndex();
@@ -36,8 +36,8 @@ function appendDom(){
 function highlightIndex(){
   for(var i = 0; i < divArray.length; i++){
 
-    if(divArray[i].data("id") == index){
-      divArray[i].addClass("highlight");
+    if(divArray[i].data('id') == index){
+      divArray[i].addClass('highlight');
     }
   }
 }
