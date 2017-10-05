@@ -1,43 +1,45 @@
 /*
-  So here we have a cool little app that highlights different boxes over time.
-  Only problem is, we only want one box highlighted at a time.
-  You can add one line of code to fix this problem.
-  See if you can figure it out!
+  HARD MODE: Display all of the pets on the page.
+
+  PRO MODE: Add an input field that allows users
+  to add new pets from the index page.
+
+  PRO MODE #2: Add a button that clears out the
+  list of pets.
 */
 
-var index = 0;
-var numSquares = 10;
-var divArray = [];
+var Pet = function(nameIn, typeIn, ageIn) {
+  this.name = nameIn;
+  this.age = ageIn;
+}
 
-$(document).ready(function(){
+// Feel free to add more data here
+var petOne = new Pet('Charlie', 'dog', 6);
+var petTwo = new Pet('Thorin', 'rabbit', 4);
+
+var pets = [petOne, petTwo];
+
+$(readyNow); // Shorthand for $(document).ready(readyNow);
+
+function readyNow(){
   appendDom();
-  setInterval(interval, 1000);
-});
-
-function interval(){
-  index++;
-  if(index == numSquares){
-    index = 0;
-  }
-  highlightIndex();
 }
 
 function appendDom(){
-  //Write Append Dom Code Here
-  for(var i = 0; i < numSquares; i++){
-    $('.container').append('<div class="square"></div>');
-    var $el = $('.container').children().last();
-    $el.data('id', i);
-    divArray.push($el);
-  }
-  highlightIndex();
-}
+  // Create a header
+  $header = $('<h1>List of Pets - Loop and Append</h1>');
+  $('.container').append($header);
 
-function highlightIndex(){
-  for(var i = 0; i < divArray.length; i++){
+  $table = $('<table></table>');
+  $table.append('<thead><tr><th>Name</th><th>Type</th><th>Age</th></thead>')
 
-    if(divArray[i].data('id') == index){
-      divArray[i].addClass('highlight');
-    }
-  }
+  $tbody = $('<tbody id="tableBody"></tbody>');
+  $table.append($tbody);
+
+  $('.container').append($table);
+
+  // YOUR CODE HERE
+
+  // Display each of the pets on the DOM.
+
 }

@@ -1,40 +1,38 @@
 /*
-  Here is a list of employees! And they are being appended to the DOM.
-  Then they are being hidden. But Mark does not like to be hidden.
-  So make sure Mark is not hidden.
+  Appending to the DOM. Take input from an input field
+  and display it on the DOM.
 */
+$(document).ready(readyNow);
 
-function Employee(name, number, salary){
-  this.name = name;
-  this.number = number;
-  this.salary = salary;
-}
-
-var scott = new Employee('Scott', '13857', 15000);
-var chris = new Employee('Chris', '98654', 15000);
-var mark = new Employee('Mark', '19084', 100000);
-var christy = new Employee('Christy', '40293', 15000);
-var fred = new Employee('Fred', '98372', 20000);
-
-var peopleArray = [scott, chris, mark, christy, fred];
-
-$(document).ready(onReady);
-
-function onReady(){
+function readyNow(){
   appendDom();
+  addClickHandlers();
 }
 
+// You should not need to modify this function
 function appendDom(){
-  for(var i = 0; i < peopleArray.length; i++){
-    $('.container').append('<div></div>');
-    var $el = $('.container').children().last();
-    $el.append('<p>' + peopleArray[i].name + '</p>');
-    $el.append('<p>' + peopleArray[i].number + '</p>');
-    $el.append('<p>' + peopleArray[i].salary + '</p>');
-    if(true /* Rewrite this  */){
-      $el.hide();
-    } else {
-      /* Code here too */
-    }
-  }
+  // Create a header
+  $header = $('<h1>Student List - Text Input</h1>');
+  $('.container').append($header);
+
+  // Create a text input
+  $inputBox = $('<input type="text" id="studentName" />')
+  $('.container').append($inputBox);
+
+  // Create a submit button
+  $submitButton = $('<button id="submitBtn">Submit</button>')
+  $('.container').append($submitButton);
+
+  $studentList = $('<ul id="studentList"></ul>');
+  $studentList.append('<li>Sample Student</li>');
+  $('.container').append($studentList);
+}
+
+
+function addClickHandlers() {
+  // YOUR CODE HERE
+
+  // When the submit button is clicked, the name from
+  // the input box should appear in the student list.
+
 }

@@ -5,9 +5,9 @@
     Line 10: 'They go to the bathroom on roller skates.'
 */
 
-$(document).ready(onReady);
+$(document).ready(readyNow);
 
-function onReady() {
+function readyNow() {
   //In the appendDom function, we will return the main DIV we create and
   //store it in a variable that we later pass into another function.
   //This is so we have access to that DIV in another Scope to make corrections
@@ -16,8 +16,11 @@ function onReady() {
   fixDom($el);
 }
 
-// Do not modify this function
+// Do not modify this function!
 function appendDom(){
+  $header = $('<h1>Correct the Poem - DOM Traversal</h1>');
+  $('.container').append($header);
+
   $('.container').append('<div></div>');
   var $el = $('.container').children().last();
   $el.append('<p>The people upstairs all practise ballet</p>');
@@ -37,5 +40,8 @@ function appendDom(){
 }
 
 function fixDom($el){
-  //Make your peom corrections here!
+  // YOUR CODE HERE
+
+  // What is $el?
+  console.log($el);
 }
