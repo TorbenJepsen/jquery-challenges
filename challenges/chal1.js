@@ -1,5 +1,5 @@
 /*
-  Add a DIV to the Container Class.
+  Add a DIV to the Container Class (a new DIV inside of the DIV that already exists).
   Inside the DIV, add a P tag that has your name
   Then add another P tag with the City you live in.
 */
