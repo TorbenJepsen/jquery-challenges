@@ -8,15 +8,13 @@ $(document).ready(readyNow);
 
 function readyNow(){
   // Call the append to dom function here
-
-  // YOUR CODE HERE
-  
+  appendDom();
 }
 
 function appendDom(){
   //Write Append Dom Code Here
-  $header = $('<h1>Your Name - Append to DOM</h1>');
-  $('.container').append($header);
+  let header = $('<h1>Your Name - Append to DOM</h1>');
+  $('.container').append(header);
 
   // YOUR CODE HERE
 }

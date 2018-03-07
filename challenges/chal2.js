@@ -12,11 +12,11 @@ function readyNow(){
 
 function appendDom(){
   // Create a header
-  $header = $('<h1>Click Event - Console Log</h1>');
-  $('.container').append($header);
+  let header = $('<h1>Click Event - Console Log</h1>');
+  $('.container').append(header);
 
   $('.container').append('<div></div>');
-  var $el = $('.container').children().last();
+  let $el = $('.container').children().last();
   $el.append('<button>Meow</button>');
 }
 

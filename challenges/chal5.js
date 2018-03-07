@@ -8,16 +8,21 @@
   list of pets.
 */
 
-var Pet = function(nameIn, typeIn, ageIn) {
-  this.name = nameIn;
-  this.age = ageIn;
+class Pet {
+  constructor(nameIn, typeIn, ageIn) {
+    this.name = nameIn;
+    this.age = ageIn;
+    this.type = typeIn;
+  }
 }
 
 // Feel free to add more data here
-var petOne = new Pet('Charlie', 'dog', 6);
-var petTwo = new Pet('Thorin', 'rabbit', 4);
+const petOne = new Pet('Charlie', 'dog', 6);
+const petTwo = new Pet('Thorin', 'rabbit', 4);
+const petThree = new Pet('Cedar', 'dog', 7);
+const petFour = new Pet('Juniper', 'cat', 3);
 
-var pets = [petOne, petTwo];
+const pets = [petOne, petTwo, petThree, petFour];
 
 $(readyNow); // Shorthand for $(document).ready(readyNow);
 
@@ -27,16 +32,16 @@ function readyNow(){
 
 function appendDom(){
   // Create a header
-  $header = $('<h1>List of Pets - Loop and Append</h1>');
-  $('.container').append($header);
+  let header = $('<h1>List of Pets - Loop and Append</h1>');
+  $('.container').append(header);
 
-  $table = $('<table></table>');
-  $table.append('<thead><tr><th>Name</th><th>Type</th><th>Age</th></thead>')
+  let table = $('<table></table>');
+  table.append('<thead><tr><th>Name</th><th>Type</th><th>Age</th></thead>');
 
-  $tbody = $('<tbody id="tableBody"></tbody>');
-  $table.append($tbody);
+  let tbody = $('<tbody id="tableBody"></tbody>');
+  table.append(tbody);
 
-  $('.container').append($table);
+  $('.container').append(table);
 
   // YOUR CODE HERE
 

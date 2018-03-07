@@ -12,17 +12,17 @@ function readyNow() {
   //store it in a variable that we later pass into another function.
   //This is so we have access to that DIV in another Scope to make corrections
   //to it.
-  var $el = appendDom();
+  let $el = appendDom();
   fixDom($el);
 }
 
 // Do not modify this function!
 function appendDom(){
-  $header = $('<h1>Correct the Poem - DOM Traversal</h1>');
-  $('.container').append($header);
+  let header = $('<h1>Correct the Poem - DOM Traversal</h1>');
+  $('.container').append(header);
 
   $('.container').append('<div></div>');
-  var $el = $('.container').children().last();
+  let $el = $('.container').children().last();
   $el.append('<p>The people upstairs all practise ballet</p>');
   $el.append('<p>Their living room is a bowling alley</p>');
   $el.append('<p>Their bedroom is full of conducted tours.</p>');

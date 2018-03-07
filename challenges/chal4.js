@@ -12,20 +12,20 @@ function readyNow(){
 // You should not need to modify this function
 function appendDom(){
   // Create a header
-  $header = $('<h1>Student List - Text Input</h1>');
-  $('.container').append($header);
+  let header = $('<h1>Student List - Text Input</h1>');
+  $('.container').append(header);
 
   // Create a text input
-  $inputBox = $('<input type="text" id="studentName" />')
-  $('.container').append($inputBox);
+  let inputBox = $('<input type="text" id="studentName" />');
+  $('.container').append(inputBox);
 
   // Create a submit button
-  $submitButton = $('<button id="submitBtn">Submit</button>')
-  $('.container').append($submitButton);
+  let submitButton = $('<button id="submitBtn">Submit</button>');
+  $('.container').append(submitButton);
 
-  $studentList = $('<ul id="studentList"></ul>');
-  $studentList.append('<li>Sample Student</li>');
-  $('.container').append($studentList);
+  let studentList = $('<ul id="studentList"></ul>');
+  studentList.append('<li>Sample Student</li>');
+  $('.container').append(studentList);
 }
 
 
