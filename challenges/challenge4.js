@@ -20,7 +20,7 @@ function appendDom(){
   $('.container').append(inputBox);
 
   // Create a submit button
-  let submitButton = $('<button id="submitBtn">Submit</button>');
+  let submitButton = $('<button id="submitButton">Submit</button>');
   $('.container').append(submitButton);
 
   let studentList = $('<ul id="studentList"></ul>');
