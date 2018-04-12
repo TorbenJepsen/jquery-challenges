@@ -17,4 +17,5 @@ function appendDom(){
   $('.container').append(header);
 
   // YOUR CODE HERE
+  $('.container').append('<div><p>Torben Jepsen</p><p>White Bear Lake</p></div>');
 }
