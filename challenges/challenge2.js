@@ -22,14 +22,8 @@ function appendDom(){
 
 function addClickHandlers() {
   // YOUR CODE HERE
-<<<<<<< HEAD
   $('button').on('click', function() {
     console.log('Meow');
   });
 
-=======
-$('button').on('click', function() {
-    console.log('Meow');
-  });
->>>>>>> 1df9abed36dd9b4307d0a00344949578e193c6ad
 }
