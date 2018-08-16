@@ -13,8 +13,11 @@ function readyNow(){
 
 function appendDom(){
   //Write Append Dom Code Here
-  let header = $('<h1>Your Name - Append to DOM</h1>');
+  let header = $('<h1>Torben Jepsen - Append to DOM</h1>');
   $('.container').append(header);
 
   // YOUR CODE HERE
+  $('.container').append('<div><p>Torben Jepsen</p><p>White Bear Lake</p></div>');
 }
+
+

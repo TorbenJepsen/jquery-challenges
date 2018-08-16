@@ -28,6 +28,7 @@ $(readyNow); // Shorthand for $(document).ready(readyNow);
 
 function readyNow(){
   appendDom();
+  displayPets();
 }
 
 function appendDom(){
@@ -40,11 +41,49 @@ function appendDom(){
 
   let tbody = $('<tbody id="tableBody"></tbody>');
   table.append(tbody);
-
   $('.container').append(table);
 
+  let input = $('<input id="inputBox1" placeholder="Name"/><input id="inputBox2" placeholder="Type" /><input id ="inputBox3" placeholder="Age"/>');
+  $('.container').append(input);
+
+  let button= $('<button id="submitButton">Add Pet</button>');
+  $('.container').append(button);
+  $('#submitButton').on('click', addPet);
+
+  let button2 = $('<button id="deleteButton">Remove Pets</button>')
+  $('.container').append(button2);
+  $('#deleteButton').on('click', removePets);
+
+
+  function addPet() {
+    const pet = new Pet(
+      $('#inputBox1').val(),
+      $('#inputBox2').val(),
+      $('#inputBox3').val(),
+    );
+
+    pets.push(pet);
+    $('#tableBody').append('<tr><td>'+$('#inputBox1').val()+'</td><td>'+$('#inputBox2').val()+'</td><td>'+$('#inputBox3').val()+ '</td></tr>');
+    $('input').val('');
+  }
+
+  function removePets(){
+    $('#tableBody').empty();
+    console.log('delete clicked');
+  }
   // YOUR CODE HERE
 
+  
   // Display each of the pets on the DOM.
 
+}
+function displayPets(){
+$(function() {
+  $.each(pets, function (){
+    console.log(this.name);
+    console.log(this.age);
+    console.log(this.type);
+    $('#tableBody').append('<tr><td>'+this.name+'</td><td>'+ this.type+'</td><td>'+this.age + '</td></tr>');
+  })
+})
 }
