@@ -32,10 +32,16 @@ function appendDom(){
 function addClickHandlers() {
   // YOUR CODE HERE
   $('#submitButton').on('click', function() {
+<<<<<<< HEAD
     $('#studentList').append('<li>'+ $('#studentName').val()+'</li>');
     $('#studentName').val('');
   });
  
+=======
+    $('#studentName').append('<li>'+ inputBox + '</li>');
+  });
+
+>>>>>>> 1df9abed36dd9b4307d0a00344949578e193c6ad
   // When the submit button is clicked, the name from
   // the input box should appear in the student list.
 
